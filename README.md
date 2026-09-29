@@ -21,4 +21,5 @@ request-- lets Python act like a web browser and fetch a webpage's raw content
 StringIO -- a small utility that lets pandas read text(like the HTML I downloaded) as if it were a file, without actually saving anything to disk fist.
 
 time -- gives you time.sleep(), which pauses code for a few seconds. Use this to avoid hammering the website with request to fast.
+
 <img width="268" height="95" alt="image" src="https://github.com/user-attachments/assets/a155bb71-411b-44a9-a6d0-06331a08110b" />

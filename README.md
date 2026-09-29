@@ -64,5 +64,13 @@ Add a new column named "SEASON" to this table, filled with the same season label
 
 time.sleep(3) --> Pauses 3 seconds before the loop moves to the next year - this is outside the try/except, so it runs whether that reason succeeded or failed, keeping your request pace steady either way
 
+# Step 4 : Combining everything
+
+<img width="645" height="109" alt="image" src="https://github.com/user-attachments/assets/5ab4aad4-2bf8-4911-8bb6-9f3dfa3ce3bf" />
+
+I now have a list of 20 separate tables. pd.concat() stacks them into one single table, one on the top of the other. 'ignore_index=True' renumbers the rows cleanly instead of restarting from 0 within each season.
+
+Basketball-Reference sneaks a "League Average" row into every season's table alongside the real teams. 'full_df["Team"] != "League Average" creates a True/False filter for every row (True = keep it, False = it's the fake row), and wrapping 'full_df[...]' around that filter keeps only the True rows.
+
 
 

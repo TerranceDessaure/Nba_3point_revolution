@@ -72,5 +72,30 @@ I now have a list of 20 separate tables. pd.concat() stacks them into one single
 
 Basketball-Reference sneaks a "League Average" row into every season's table alongside the real teams. 'full_df["Team"] != "League Average" creates a True/False filter for every row (True = keep it, False = it's the fake row), and wrapping 'full_df[...]' around that filter keeps only the True rows.
 
+# Step 5: The groupby (this is the heart of the project)
+
+<img width="419" height="62" alt="image" src="https://github.com/user-attachments/assets/ca48649f-2348-4ef0-95af-4485c0fa1e3a" />
+
+This is the key data science operation.
+- full_df.groupby("SEASON") --> split the big table into 20  mini tables, one per season
+- ["3PA"] --> from each mini-table, only look at the 3PA column.
+-  .mean() --> average those numbers within each group
+
+The result, season_avg, is one number per season: the league-wide average 3-point attempts per game that year
+
+# Step 6: Saving the dat
+
+<img width="410" height="76" alt="image" src="https://github.com/user-attachments/assets/961bb7a1-75ab-4bb3-a4df-d1f77b29c85d" />
+
+# Step 7: Plotting
+
+<img width="538" height="210" alt="image" src="https://github.com/user-attachments/assets/7b63c0f9-74d9-4a4c-bffa-70f6e8076005" />
+
+# Step 8:  The one-sentence finding
+
+<img width="690" height="197" alt="image" src="https://github.com/user-attachments/assets/0449fd0a-c9de-479e-bc06-3e5920f6a195" />
+
+
+
 
 

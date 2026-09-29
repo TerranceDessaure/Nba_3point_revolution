@@ -56,6 +56,13 @@ A try/execpt block. Python attempts everyting inside try:. If anything goes wron
 'pd.read_html()'  scans it and finds <table>  elements converting each into a pandas DataFrame.
 'attrs={"id": "per_game-team"}' tell pandas "only give me the one table with this specific ID," which is the exact table with per-game team stats. It still return a list of matches (usually just one), so 'table[0]' grabs that single table out of the list.
 
+<img width="621" height="89" alt="image" src="https://github.com/user-attachments/assets/d06872d0-9850-4339-a14e-993a9667ab1d" />
+
+Add a new column named "SEASON" to this table, filled with the same season label (like "2005-06") on every row. This matter because once you combine all 20 seasons into one big table, you need a way to tell which rows came from which year.
+
+' all_seasons_data.append(df)' --> Adds this season's to onto the end of the list from earlier.
+
+time.sleep(3) --> Pauses 3 seconds before the loop moves to the next year - this is outside the try/except, so it runs whether that reason succeeded or failed, keeping your request pace steady either way
 
 
 

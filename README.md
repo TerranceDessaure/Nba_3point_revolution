@@ -23,3 +23,13 @@ StringIO -- a small utility that lets pandas read text(like the HTML I downloade
 time -- gives you time.sleep(), which pauses code for a few seconds. Use this to avoid hammering the website with request to fast.
 
 <img width="268" height="95" alt="image" src="https://github.com/user-attachments/assets/a155bb71-411b-44a9-a6d0-06331a08110b" />
+
+# Step 2: Config
+
+<img width="708" height="165" alt="image" src="https://github.com/user-attachments/assets/06cfb78b-f574-4d8f-abae-08e872f4e7cd" />
+
+Build list of numbers: the +1 is needed because  range stops before its second number) and  list(...) turns into a list we can loop over
+
+Next we create the dictionary. When the script requests a webpage, it identifies itself to the server. By default, request announces itself as a Python script, and some sites block that. This header disguises your request as comming from a normal Chrome browser instead.
+
+
